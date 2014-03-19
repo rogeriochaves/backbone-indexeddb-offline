@@ -343,9 +343,6 @@ do (global = window, _, Backbone) ->
       if (new Date(model.get 'updated_at')) < (new Date(item.updated_at))
         delete item.id
         model.save(item, local: true, silent: false)
-      if (new Date(model.get 'categoria_updated_at')) < (new Date(item.categoria_updated_at))
-        model.set(categoria_id: item.categoria_id, categoria_updated_at: item.categoria_updated_at)
-        model.save(null, local: true, silent: false)
 
     # Use to send modifyed data to the server
     # You can use it manually for sending changes

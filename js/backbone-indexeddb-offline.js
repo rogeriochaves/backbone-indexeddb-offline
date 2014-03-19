@@ -443,16 +443,6 @@
             silent: false
           });
         }
-        if ((new Date(model.get('categoria_updated_at'))) < (new Date(item.categoria_updated_at))) {
-          model.set({
-            categoria_id: item.categoria_id,
-            categoria_updated_at: item.categoria_updated_at
-          });
-          return model.save(null, {
-            local: true,
-            silent: false
-          });
-        }
       };
 
       Sync.prototype.push = function() {
