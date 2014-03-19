@@ -129,7 +129,7 @@ do (global = window, _, Backbone) ->
       if match = key.match(/([^-]*)-([^\s]*)/)
         try
           id = (if match[2] == "new" then match[2] else +match[2])
-          IndexedDB.put(match[1], value, id)
+          IndexedDB.put(match[1], JSON.parse(JSON.stringify(value)), id)
         catch e
       
 

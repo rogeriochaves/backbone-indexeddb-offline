@@ -130,7 +130,7 @@
         if (match = key.match(/([^-]*)-([^\s]*)/)) {
           try {
             id = (match[2] === "new" ? match[2] : +match[2]);
-            return IndexedDB.put(match[1], value, id);
+            return IndexedDB.put(match[1], JSON.parse(JSON.stringify(value)), id);
           } catch (_error) {
             e = _error;
           }
