@@ -1,4 +1,4 @@
-#= require backbone/lib/ydn.db-i-core-qry.js
+#= require backbone/lib/ydn.db-isw-core-qry.js
 #
 #    Backbone.offline allows your Backbone.js app to work offline
 #    https://github.com/Ask11/backbone.offline
