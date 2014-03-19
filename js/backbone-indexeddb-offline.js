@@ -294,7 +294,6 @@
 
       Storage.prototype.clear = function() {
         var e;
-        alert(this.name);
         try {
           return IndexedDB.clear(this.name);
         } catch (_error) {

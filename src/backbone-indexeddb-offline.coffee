@@ -175,7 +175,6 @@ do (global = window, _, Backbone) ->
     # Returns the array of all models currently in the storage.
     # And refreshes the storage into background
     findAll: (options = {}) ->
-      #alert(if options.local then "Local" else "Não Local")
       #unless options.local
       #  if @isEmpty() then @sync.full(options) else @sync.incremental(options)
       if !Offline.onLine()
@@ -237,7 +236,6 @@ do (global = window, _, Backbone) ->
 
     # Clears the current storage
     clear: ->
-      alert(@name)
       try
         IndexedDB.clear(@name)
       catch e
